@@ -5,17 +5,17 @@ namespace app\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Card
+ * Cards
  *
- * @ORM\Table(name="card")
+ * @ORM\Table(name="Cards")
  * @ORM\Entity
  */
-class Card
+class Cards
 {
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Column(name="Id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
@@ -24,28 +24,28 @@ class Card
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255, nullable=false)
+     * @ORM\Column(name="Name", type="string", length=255, nullable=false)
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="cardset", type="string", length=255, nullable=false)
+     * @ORM\Column(name="CardSet", type="string", length=255, nullable=false)
      */
     private $cardset;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="cardnum", type="integer", nullable=false)
+     * @ORM\Column(name="CardNum", type="integer", nullable=false)
      */
     private $cardnum;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="cardtype", type="string", length=255, nullable=false)
+     * @ORM\Column(name="CardType", type="string", length=255, nullable=false)
      */
     private $cardtype;
 
