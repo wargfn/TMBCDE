@@ -47,6 +47,19 @@ class API extends AbstractFOSRestController
         return $this->handleView($this->view($tyrants));
         //return $this->json(['Coming'=>'Soon']);
     }
+     
+    /**
+     * Lists all Gearlocs
+     * @Rest\Get("/gearlocs")
+     *
+     * @return Response
+     */
+    public function getGearlocsAction()
+    {
+        $repository = $this->getDoctrine()->getRepository(Gearlocs::class);
+        $gearlocs = $repository->findAll();
+        return $this->handleView($this->view($gearlocs));
+    }
 
     /**
      * Lists all Encounterslist
