@@ -1,13 +1,13 @@
 <?php
 
-namespace app\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Monthlychallenges
  *
- * @ORM\Table(name="MonthlyChallenges")
+ * @ORM\Table(name="MonthlyChallenges", indexes={@ORM\Index(name="fk_encounters", columns={"EncounterListId"})})
  * @ORM\Entity
  */
 class Monthlychallenges
@@ -50,18 +50,21 @@ class Monthlychallenges
     private $challengetype;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="EncounterListId", type="string", length=255, nullable=false)
-     */
-    private $encounterlistid;
-
-    /**
      * @var \DateTime
      *
      * @ORM\Column(name="MonthlyDate", type="date", nullable=false)
      */
     private $monthlydate;
+
+    /**
+     * @var \Encounterlists
+     *
+     * @ORM\ManyToOne(targetEntity="Encounterlists")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="EncounterListId", referencedColumnName="Id")
+     * })
+     */
+    private $encounterlistid;
 
 
 }

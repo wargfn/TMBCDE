@@ -78,6 +78,14 @@
       <path value="K:/vendor/friendsofsymfony/rest-bundle" />
       <path value="K:/vendor/jms/metadata" />
       <path value="K:/vendor/jms/serializer-bundle" />
+      <path value="K:/vendor/symfony/validator" />
+      <path value="K:/vendor/symfony/translation-contracts" />
+      <path value="K:/vendor/symfony/polyfill-intl-icu" />
+      <path value="K:/vendor/symfony/inflector" />
+      <path value="K:/vendor/symfony/form" />
+      <path value="K:/vendor/symfony/intl" />
+      <path value="K:/vendor/symfony/property-access" />
+      <path value="K:/vendor/symfony/options-resolver" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
