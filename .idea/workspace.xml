@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b48e1155-d389-4593-9490-7c1d8dc788bc" name="Default Changelist" comment="">
-      <change afterPath="K:/config/packages/test/validator.yaml" afterDir="false" />
-      <change afterPath="K:/config/packages/validator.yaml" afterDir="false" />
-      <change afterPath="K:/src/Controller/API.php" afterDir="false" />
       <change beforePath="K:/.gitignore" beforeDir="false" afterPath="K:/.gitignore" afterDir="false" />
       <change beforePath="K:/.idea/K.iml" beforeDir="false" afterPath="K:/.idea/K.iml" afterDir="false" />
       <change beforePath="K:/.idea/misc.xml" beforeDir="false" afterPath="K:/.idea/misc.xml" afterDir="false" />
@@ -13,16 +10,11 @@
       <change beforePath="K:/.idea/vcs.xml" beforeDir="false" afterPath="K:/.idea/vcs.xml" afterDir="false" />
       <change beforePath="K:/.idea/workspace.xml" beforeDir="false" afterPath="K:/.idea/workspace.xml" afterDir="false" />
       <change beforePath="K:/bin/console" beforeDir="false" afterPath="K:/bin/console" afterDir="false" />
-      <change beforePath="K:/composer.json" beforeDir="false" afterPath="K:/composer.json" afterDir="false" />
-      <change beforePath="K:/composer.lock" beforeDir="false" afterPath="K:/composer.lock" afterDir="false" />
       <change beforePath="K:/config/packages/fos_rest.yaml" beforeDir="false" afterPath="K:/config/packages/fos_rest.yaml" afterDir="false" />
-      <change beforePath="K:/src/Entity/Card.php" beforeDir="false" afterPath="K:/src/Entity/Card.php" afterDir="false" />
+      <change beforePath="K:/src/Controller/API.php" beforeDir="false" afterPath="K:/src/Controller/API.php" afterDir="false" />
       <change beforePath="K:/src/Entity/Cards.php" beforeDir="false" afterPath="K:/src/Entity/Cards.php" afterDir="false" />
       <change beforePath="K:/src/Entity/Encounterlists.php" beforeDir="false" afterPath="K:/src/Entity/Encounterlists.php" afterDir="false" />
-      <change beforePath="K:/src/Entity/Gearlocs.php" beforeDir="false" afterPath="K:/src/Entity/Gearlocs.php" afterDir="false" />
-      <change beforePath="K:/src/Entity/Monthlychallenges.php" beforeDir="false" afterPath="K:/src/Entity/Monthlychallenges.php" afterDir="false" />
       <change beforePath="K:/src/Entity/Tyrants.php" beforeDir="false" afterPath="K:/src/Entity/Tyrants.php" afterDir="false" />
-      <change beforePath="K:/symfony.lock" beforeDir="false" afterPath="K:/symfony.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,77 +22,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>K:/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://K:/config/bundles.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://K:/config/packages/fos_rest.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://K:/config/services.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://K:/src/Controller/API.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="1903" selection-start-line="1903" selection-end-line="1903" />
+            <state relative-caret-position="-7097">
+              <caret line="1706" column="25" selection-start-line="1706" selection-start-column="25" selection-end-line="1706" selection-end-column="25" />
               <folding>
                 <element signature="e#34#79#0#PHP" expanded="true" />
-                <element signature="e#2195#6465#0#PHP" />
-                <element signature="e#6588#12098#0#PHP" />
-                <element signature="e#13429#19057#0#PHP" />
-                <element signature="e#19184#24769#0#PHP" />
-                <element signature="e#25731#32198#0#PHP" />
-                <element signature="e#25731#32212#0#PHP" />
-                <element signature="e#38848#44910#0#PHP" />
-                <element signature="e#45035#51491#0#PHP" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://K:/src/Entity/Encounterlists.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3366">
-              <caret line="198" column="5" selection-start-line="198" selection-start-column="5" selection-end-line="198" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://K:/src/Entity/Tyrants.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://K:/src/Entity/Cards.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="80" selection-start-line="50" selection-end-line="80" />
             </state>
           </provider>
         </entry>
@@ -229,46 +163,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="K:" type="b2602c69:ProjectViewProjectNode" />
+              <item name="K" type="b2602c69:ProjectViewProjectNode" />
               <item name="K:" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="K:" type="b2602c69:ProjectViewProjectNode" />
-              <item name="K:" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="K:" type="b2602c69:ProjectViewProjectNode" />
-              <item name="K:" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="K:" type="b2602c69:ProjectViewProjectNode" />
+              <item name="K" type="b2602c69:ProjectViewProjectNode" />
               <item name="K:" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="K:" type="b2602c69:ProjectViewProjectNode" />
+              <item name="K" type="b2602c69:ProjectViewProjectNode" />
               <item name="K:" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="K:" type="b2602c69:ProjectViewProjectNode" />
-              <item name="K:" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,19 +218,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560715733036</updated>
-      <workItem from="1560715735307" duration="21011000" />
+      <workItem from="1560715735307" duration="21639000" />
+      <workItem from="1560802968094" duration="748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21011000" />
+    <option name="totallyTimeSpent" value="22387000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16684435" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1684435" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -337,13 +255,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://K:/src/Entity/EcounterLists.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="59" column="46" lean-forward="true" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://K:/src/Entity/EcounterLists.php" />
     <entry file="file://K:/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -353,23 +265,6 @@
     </entry>
     <entry file="file://K:/.env">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://K:/config/bundles.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://K:/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://K:/config/packages/fos_rest.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://K:/src/Entity/Card.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -392,17 +287,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://K:/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://K:/config/packages/fos_rest.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://K:/config/bundles.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://K:/src/Entity/Encounterlists.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3366">
           <caret line="198" column="5" selection-start-line="198" selection-start-column="5" selection-end-line="198" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://K:/src/Entity/Cards.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="80" selection-start-line="50" selection-end-line="80" />
         </state>
       </provider>
     </entry>
@@ -413,20 +318,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://K:/src/Entity/Cards.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="80" selection-start-line="50" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://K:/src/Controller/API.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="1903" selection-start-line="1903" selection-end-line="1903" />
+        <state relative-caret-position="-7097">
+          <caret line="1706" column="25" selection-start-line="1706" selection-start-column="25" selection-end-line="1706" selection-end-column="25" />
           <folding>
             <element signature="e#34#79#0#PHP" expanded="true" />
-            <element signature="e#2195#6465#0#PHP" />
-            <element signature="e#6588#12098#0#PHP" />
-            <element signature="e#13429#19057#0#PHP" />
-            <element signature="e#19184#24769#0#PHP" />
-            <element signature="e#25731#32198#0#PHP" />
-            <element signature="e#25731#32212#0#PHP" />
-            <element signature="e#38848#44910#0#PHP" />
-            <element signature="e#45035#51491#0#PHP" />
           </folding>
         </state>
       </provider>
