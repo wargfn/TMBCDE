@@ -26,20 +26,7 @@
     <pharConfigPath>K:/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://K:/src/Controller/API.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7097">
-              <caret line="1706" column="25" selection-start-line="1706" selection-start-column="25" selection-end-line="1706" selection-end-column="25" />
-              <folding>
-                <element signature="e#34#79#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="K:/" />
@@ -163,7 +150,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,6 +172,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,19 +206,19 @@
       <option name="presentableId" value="Default" />
       <updated>1560715733036</updated>
       <workItem from="1560715735307" duration="21639000" />
-      <workItem from="1560802968094" duration="748000" />
+      <workItem from="1560802968094" duration="1381000" />
+      <workItem from="1560892131782" duration="1131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22387000" />
+    <option name="totallyTimeSpent" value="24151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1684435" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17004265" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -327,8 +314,8 @@
     </entry>
     <entry file="file://K:/src/Controller/API.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7097">
-          <caret line="1706" column="25" selection-start-line="1706" selection-start-column="25" selection-end-line="1706" selection-end-column="25" />
+        <state relative-caret-position="750">
+          <caret line="2438" column="77" lean-forward="true" selection-start-line="2438" selection-start-column="77" selection-end-line="2438" selection-end-column="77" />
           <folding>
             <element signature="e#34#79#0#PHP" expanded="true" />
           </folding>
