@@ -80,12 +80,41 @@
       <path value="K:/vendor/jms/serializer-bundle" />
       <path value="K:/vendor/symfony/validator" />
       <path value="K:/vendor/symfony/translation-contracts" />
-      <path value="K:/vendor/symfony/polyfill-intl-icu" />
       <path value="K:/vendor/symfony/inflector" />
-      <path value="K:/vendor/symfony/form" />
-      <path value="K:/vendor/symfony/intl" />
       <path value="K:/vendor/symfony/property-access" />
+      <path value="K:/vendor/phpdocumentor/reflection-common" />
+      <path value="K:/vendor/phpdocumentor/type-resolver" />
+      <path value="K:/vendor/phpdocumentor/reflection-docblock" />
+      <path value="K:/vendor/webmozart/assert" />
+      <path value="K:/vendor/twig/twig" />
+      <path value="K:/vendor/symfony/serializer" />
+      <path value="K:/vendor/symfony/var-dumper" />
+      <path value="K:/vendor/symfony/twig-bundle" />
+      <path value="K:/vendor/symfony/web-profiler-bundle" />
+      <path value="K:/vendor/symfony/serializer-pack" />
+      <path value="K:/vendor/symfony/property-info" />
+      <path value="K:/vendor/symfony/profiler-pack" />
+      <path value="K:/vendor/symfony/twig-bridge" />
+      <path value="K:/vendor/nikic/php-parser" />
+      <path value="K:/vendor/egulias/email-validator" />
+      <path value="K:/vendor/monolog/monolog" />
+      <path value="K:/vendor/swiftmailer/swiftmailer" />
+      <path value="K:/vendor/doctrine/data-fixtures" />
+      <path value="K:/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="K:/vendor/symfony/swiftmailer-bundle" />
+      <path value="K:/vendor/symfony/maker-bundle" />
+      <path value="K:/vendor/symfony/translation" />
+      <path value="K:/vendor/symfony/polyfill-intl-icu" />
       <path value="K:/vendor/symfony/options-resolver" />
+      <path value="K:/vendor/symfony/security-bundle" />
+      <path value="K:/vendor/symfony/security-http" />
+      <path value="K:/vendor/symfony/security-csrf" />
+      <path value="K:/vendor/symfony/asset" />
+      <path value="K:/vendor/symfony/monolog-bundle" />
+      <path value="K:/vendor/symfony/security-guard" />
+      <path value="K:/vendor/symfony/monolog-bridge" />
+      <path value="K:/vendor/symfony/intl" />
+      <path value="K:/vendor/symfony/form" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
