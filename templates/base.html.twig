@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />{% endblock %}
     </head>
     <body>
+        {% block navbar %}{% include 'default/navbar.twig' %}{% endblock %}
         {% block body %}{% endblock %}
+        {% block footer %}{%  include 'default/footer.twig' %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
