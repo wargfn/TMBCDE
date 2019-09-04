@@ -14,6 +14,7 @@ use App\Entity\Tyrants;
 use App\Entity\Encounterlists;
 use App\Entity\Monthlychallenges;
 use App\Entity\Gearlocs;
+use Doctrine\ORM\EntityManager;
 
 
 /**
@@ -2671,5 +2672,79 @@ class API extends AbstractFOSRestController
         $em->Flush();
 
         return $this->json($encounter);
+    }
+
+    /**
+     * @Route("/monthly/{id}", name="monthly_by_id", requirements={"id" = "\d+"}))
+     */
+    public function monthlyById($id)
+    {
+        $repository = $this->getDoctrine()->getRepository(Monthlychallenges::class);
+        $items = $repository->find($id);
+        return $this->handleView($this->view($items));
+    }
+
+    /**
+     * @Route("/encounters/{id}", name="encounters_by_id", requirements={"id" = "\d+"}))
+     */
+    public function encountersById($id)
+    {
+        $repository = $this->getDoctrine()->getRepository(Encounterlists::class);
+        $items = $repository->find($id);
+        return $this->handleView($this->view($items));
+    }
+
+    /**
+     * @Route("/current", name="currentChallenges")
+     */
+    public function currentChallenges($year = null, $month = null)
+    {
+        if ($month === null) {
+            $month = (int) date('m');
+        }
+
+        if ($year === null) {
+            $year = (int) date('Y');
+        }
+
+        $startDate = new \DateTimeImmutable("$year-$month-01T00:00:00");
+        $endDate = $startDate->modify('last day of this month')->setTime(23,59,59);
+
+        $qb = $this->getDoctrine()->getRepository(Monthlychallenges::class)->createQueryBuilder('object');
+        $qb->where('object.monthlydate BETWEEN :start AND :end');
+        $qb->setParameter('start', $startDate->format('Y-m-d H:i:s'));
+        $qb->setParameter('end', $endDate->format('Y-m-d H:i:s'));
+
+        //$repository = $this->getDoctrine()->getRepository(Encounterlists::class);
+        $currentChallenge = $qb->getQuery()->getResult();
+
+        return $this->handleView($this->view($currentChallenge));
+    }
+
+    /**
+     * @Route("/past/{year}/{month}", name="pastChallenges", requirements={"year" = "\d+", "month" = "\d+"})
+     */
+    public function pastChallenges($year, $month)
+    {
+        if ($month === null) {
+            $month = (int) date('m');
+        }
+
+        if ($year === null) {
+            $year = (int) date('Y');
+        }
+
+        $startDate = new \DateTimeImmutable("$year-$month-01T00:00:00");
+        $endDate = $startDate->modify('last day of this month')->setTime(23,59,59);
+
+        $qb = $this->getDoctrine()->getRepository(Monthlychallenges::class)->createQueryBuilder('object');
+        $qb->where('object.monthlydate BETWEEN :start AND :end');
+        $qb->setParameter('start', $startDate->format('Y-m-d H:i:s'));
+        $qb->setParameter('end', $endDate->format('Y-m-d H:i:s'));
+
+        //$repository = $this->getDoctrine()->getRepository(Encounterlists::class);
+        $pastChallenge = $qb->getQuery()->getResult();
+
+        return $this->handleView($this->view($pastChallenge));
     }
 }

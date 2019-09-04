@@ -5,4 +5,9 @@
 {% block body %}
     <h1>Adventure Encounters</h1>
     <p>All this was rendered in TWIGS!!!</p>
+    {% if encounter is defined and encounter is not empty %}
+        {{ encounter.name }}
+    {% elseif encounter is not defined %}
+        <p>Did not Pass any variables</p>
+    {% endif %}
 {% endblock %}

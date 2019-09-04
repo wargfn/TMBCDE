@@ -3,7 +3,7 @@
 
 namespace App\Controller;
 
-
+use App\Entity\EncounterPublish;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,10 +26,11 @@ class Encounters extends AbstractController
     /**
      * @Route("/{id}", name="by_id", requirements={"id" = "\d+"})
      */
-    public function monthly($id)
+    public function encounter(EncounterPublish $id)
     {
-        $response = array("id" => $id);
-        return $this->render('default/encounters.twig', $response);
+
+        $encounter = array($this->json($id));
+        return $this->render('default/encounters.twig', $encounter);
     }
 
 }
