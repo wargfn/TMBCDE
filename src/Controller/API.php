@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\EncounterPublish;
+use App\Entity\MonthlyPublish;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
@@ -2637,4 +2639,37 @@ class API extends AbstractFOSRestController
         return $this->handleView($this->view($buildEncounter));
     }
 
+    /**
+    * @Route("/monthlyadd", name="monthly_add", methods={"POST"})
+    */
+    public function monthlyAdd(Request $request)
+    {
+        /**@var Serializer $serializer */
+        $serializer = $this->get('serializer');
+
+        $monthlyChallenge = $serializer->deserialize($request->getContent(), MonthlyPublish::class, 'json');
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($monthlyChallenge);
+        $em->Flush();
+
+        return $this->json($monthlyChallenge);
+    }
+
+    /**
+     * @Route("/encounteradd", name="encounter_add", methods={"POST"})
+     */
+    public function encounterAdd(Request $request)
+    {
+        /**@var Serializer $serializer */
+        $serializer = $this->get('serializer');
+
+        $encounter = $serializer->deserialize($request->getContent(), EncounterPublish::class, 'json');
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($encounter);
+        $em->Flush();
+
+        return $this->json($encounter);
+    }
 }
