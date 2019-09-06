@@ -19,42 +19,42 @@ class Gearlocs
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    public $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="Name", type="string", length=255, nullable=false)
      */
-    private $name;
+    public $name;
 
     /**
      * @var int
      *
      * @ORM\Column(name="Health", type="integer", nullable=false)
      */
-    private $health;
+    public $health;
 
     /**
      * @var int
      *
      * @ORM\Column(name="Dexterity", type="integer", nullable=false)
      */
-    private $dexterity;
+    public $dexterity;
 
     /**
      * @var int
      *
      * @ORM\Column(name="Attack", type="integer", nullable=false)
      */
-    private $attack;
+    public $attack;
 
     /**
      * @var int
      *
      * @ORM\Column(name="Defense", type="integer", nullable=false)
      */
-    private $defense;
+    public $defense;
 
     /**
      * @var string|null

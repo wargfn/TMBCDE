@@ -38,7 +38,7 @@ class API extends AbstractFOSRestController
     }
 
     /**
-     * Lists all Tyrants
+     * Lists all TyrantsController
      * @Rest\Get("/tyrants")
      *
      * @return Response

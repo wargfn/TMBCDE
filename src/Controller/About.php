@@ -20,6 +20,6 @@ class About extends AbstractController
     public function index()
     {
         //return new Response('<h1>Encounter Lists</h1>');
-        return $this->render('default/about.twig');
+        return $this->render('default/about.html.twig');
     }
 }

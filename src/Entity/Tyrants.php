@@ -5,7 +5,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Tyrants
+ * TyrantsController
  *
  * @ORM\Table(name="Tyrants")
  * @ORM\Entity

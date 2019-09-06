@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TMB Tyrants{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Tyrants</h1>
+        <p>The meanest of the Mean and the Baddest of the Bad.</p>
+        <table class="table table-borderless">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Progress</th>
+                <th>Days</th>
+            </tr>
+            {% if tyrants is defined and tyrants is not empty %}
+                {% for tyrant in tyrants %}
+                    <tr>
+                        <td>{{ tyrant.id }}</td>
+                        <td><a href="{{ path('tyrants_by_id', {'id':tyrant.id}) }}">{{ tyrant.name }}</a></td>
+                        <td>{{ tyrant.progress }}</td>
+                        <td>{{ tyrant.days }}</td>
+                    </tr>
+                {% endfor %}
+                {% if tyrants|length == 1 %}
+                    <tr>
+                        <td>{{ tyrants.id }}</td>
+                        <td><a href="{{ path('tyrants_index') }}">{{ tyrants.name }}</a></td>
+                        <td>{{ tyrants.progress }}</td>
+                        <td>{{ tyrants.days }}</td>
+                    </tr>
+                {% endif %}
+            {% endif %}
+        </table>
+    </div>
+{% endblock %}

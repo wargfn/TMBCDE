@@ -159,9 +159,9 @@ class Encounterlists
     private $day9id;
 
     /**
-     * @var \Tyrants
+     * @var \TyrantsController
      *
-     * @ORM\ManyToOne(targetEntity="Tyrants")
+     * @ORM\ManyToOne(targetEntity="TyrantsController")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="TyrantId", referencedColumnName="Id")
      * })

@@ -18,7 +18,7 @@ class DefaultIndex extends AbstractController
      */
     public function index()
     {
-       return $this->render('default/index.twig');
+       return $this->render('default/index.html..twig');
     }
 
 }

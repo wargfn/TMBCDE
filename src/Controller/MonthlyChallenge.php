@@ -18,7 +18,7 @@ class MonthlyChallenge extends AbstractController
     public function index()
     {
         //return new Response("<h1>BOOM!</h1><p>Does this finally work?</p>");
-        return $this->render('default/monthly.twig');
+        return $this->render('default/monthly.html.twig');
     }
 
     /**
@@ -27,7 +27,7 @@ class MonthlyChallenge extends AbstractController
     public function monthly($id)
     {
         $response = array("id" => $id);
-        return $this->render('default/monthly.twig', $response);
+        return $this->render('default/monthly.html.twig', $response);
     }
 
 }

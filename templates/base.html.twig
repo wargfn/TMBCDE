@@ -6,9 +6,9 @@
         {% block stylesheets %}<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />{% endblock %}
     </head>
     <body>
-        {% block navbar %}{% include 'default/navbar.twig' %}{% endblock %}
+        {% block navbar %}{% include 'default/navbar.html.twig' %}{% endblock %}
         {% block body %}{% endblock %}
-        {% block footer %}{%  include 'default/footer.twig' %}{% endblock %}
+        {% block footer %}{%  include 'default/footer.html.twig' %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -20,7 +20,7 @@ class Encounters extends AbstractController
     public function index()
     {
         //return new Response('<h1>Encounter Lists</h1>');
-        return $this->render('default/encounters.twig');
+        return $this->render('default/encounters.html.twig');
     }
 
     /**
@@ -30,7 +30,7 @@ class Encounters extends AbstractController
     {
 
         $encounter = array($this->json($id));
-        return $this->render('default/encounters.twig', $encounter);
+        return $this->render('default/encounters.html.twig', $encounter);
     }
 
 }
