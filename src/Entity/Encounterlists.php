@@ -161,7 +161,7 @@ class Encounterlists
     /**
      * @var \TyrantsController
      *
-     * @ORM\ManyToOne(targetEntity="TyrantsController")
+     * @ORM\ManyToOne(targetEntity="Tyrants")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="TyrantId", referencedColumnName="Id")
      * })

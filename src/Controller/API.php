@@ -2695,6 +2695,36 @@ class API extends AbstractFOSRestController
     }
 
     /**
+     * @Route("/cards/{id}", name="cards_by_id", requirements={"id" = "\d+"})
+     */
+    public function getCardById($id)
+    {
+        $respository = $this->getDoctrine()->getRepository(Cards::class);
+        $items = $respository->find($id);
+        return $this->handleView($this->view($items));
+    }
+
+    /**
+     * @Route("/gearlocs/{id}", name="gearlocs_by_id", requirements={"id" = "\d+"})
+     */
+    public function getGearlocById($id)
+    {
+        $respository = $this->getDoctrine()->getRepository(Gearlocs::class);
+        $items = $respository->find($id);
+        return $this->handleView($this->view($items));
+    }
+
+    /**
+     * @Route("/tyrants/{id}", name="tyrants_by_id", requirements={"id" = "\d+"})
+     */
+    public function getTyrantById($id)
+    {
+        $respository = $this->getDoctrine()->getRepository(Tyrants::class);
+        $items = $respository->find($id);
+        return $this->handleView($this->view($items));
+    }
+
+    /**
      * @Route("/current", name="currentChallenges")
      */
     public function currentChallenges($year = null, $month = null)

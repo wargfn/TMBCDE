@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Monthly Challenge{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% if encounters is defined and encounters is not empty %}
+            {% if monthlyChallenges is defined and monthlyChallenges is not empty %}
+            {% if tyrant is defined and tyrant is not empty %}
+                <h1>{{ monthlyChallenges.name }}</h1>
+                <p>{{ monthlyChallenges.description }} - {{ monthlyChallenges.challengetype }} - {{ monthlyChallenges.challengeset }}</p>
+                <table class="table table-borderless">
+                    <tr>
+                        <th></th>
+                        <th>Tyrant Name</th>
+                        <th>Progress</th>
+                        <th>Days</th>
+                    </tr>
+                    <tr>
+                        <td><img src="{{ asset('/images/'~tyrant.name~'.jpg') }}" width="100px" height="100px"></td>
+                        <td>{{ tyrant.name }}</td>
+                        <td>{{ tyrant.progress }}</td>
+                        <td>{{ tyrant.days }}</td>
+                    </tr>
+                </table>
+            {% endif %}
+            {% endif %}
+            <table class="table table-borderless">
+                <tr>
+                    <th>Day</th>
+                    <th>Name</th>
+                    <th>Card</th>
+                </tr>
+                <tr>
+                    <td>Day 1</td>
+                    <td>{{ encounters.day1id.name }}</td>
+                    <td>{{ encounters.day1id.cardSet }} - {{ encounters.day1id.cardType }}  {{ encounters.day1id.cardNum }}</td>
+                </tr>
+                <tr>
+                    <td>Day 2</td>
+                    <td>{{ encounters.day2id.name }}</td>
+                    <td>{{ encounters.day2id.cardSet }} - {{ encounters.day2id.cardType }}  {{ encounters.day2id.cardNum }}</td>
+                </tr>
+                <tr>
+                    <td>Day 3</td>
+                    <td>{{ encounters.day3id.name }}</td>
+                    <td>{{ encounters.day3id.cardSet }} - {{ encounters.day3id.cardType }}  {{ encounters.day3id.cardNum }}</td>
+                </tr>
+                <tr>
+                    <td>Day 4</td>
+                    <td>{{ encounters.day4id.name }}</td>
+                    <td>{{ encounters.day4id.cardSet }} - {{ encounters.day4id.cardType }}  {{ encounters.day4id.cardNum }}</td>
+                </tr>
+                <tr>
+                    <td>Day 5</td>
+                    <td>{{ encounters.day5id.name }}</td>
+                    <td>{{ encounters.day5id.cardSet }} - {{ encounters.day5id.cardType }}  {{ encounters.day5id.cardNum }}</td>
+                </tr>
+                <tr>
+                    <td>Day 6</td>
+                    <td>{{ encounters.day6id.name }}</td>
+                    <td>{{ encounters.day6id.cardSet }} - {{ encounters.day6id.cardType }}  {{ encounters.day6id.cardNum }}</td>
+                </tr>
+                <tr>
+                    <td>Day 7</td>
+                    <td>{{ encounters.day7id.name }}</td>
+                    <td>{{ encounters.day7id.cardSet }} - {{ encounters.day7id.cardType }}  {{ encounters.day7id.cardNum }}</td>
+                </tr>
+                {% if encounters.day8id is not empty %}
+                    <tr>
+                        <td>Day 8</td>
+                        <td>{{ encounters.day8id.name }}</td>
+                        <td>{{ encounters.day8id.cardSet }} - {{ encounters.day8id.cardType }}  {{ encounters.day8id.cardNum }}</td>
+                    </tr>
+                {% endif %}
+                {% if encounters.day9id is not empty %}
+                    <tr>
+                        <td>Day 9</td>
+                        <td>{{ encounters.day9id.name }}</td>
+                        <td>{{ encounters.day9id.cardSet }} - {{ encounters.day9id.cardType }}  {{ encounters.day9id.cardNum }}</td>
+                    </tr>
+                {% endif %}
+                {% if encounters.day10id is not empty %}
+                    <tr>
+                        <td>Day 10</td>
+                        <td>{{ encounters.day10id.name }}</td>
+                        <td>{{ encounters.day10id.cardSet }} - {{ encounters.day10id.cardType }}  {{ encounters.day10id.cardNum }}</td>
+                    </tr>
+                {% endif %}
+                {% if encounters.day11id is not empty %}
+                    <tr>
+                        <td>Day 11</td>
+                        <td>{{ encounters.day11id.name }}</td>
+                        <td>{{ encounters.day11id.cardSet }} - {{ encounters.day11id.cardType }}  {{ encounters.day11id.cardNum }}</td>
+                    </tr>
+                {% endif %}
+                {% if encounters.day12id is not empty %}
+                    <tr>
+                        <td>Day 12</td>
+                        <td>{{ encounters.day12id.name }}</td>
+                        <td>{{ encounters.day12id.cardSet }} - {{ encounters.day12id.cardType }}  {{ encounters.day12id.cardNum }}</td>
+                    </tr>
+                {% endif %}
+                {% if encounters.day13id is not empty %}
+                    <tr>
+                        <td>Day 13</td>
+                        <td>{{ encounters.day13id.name }}</td>
+                        <td>{{ encounters.day13id.cardSet }} - {{ encounters.day13id.cardType }}  {{ encounters.day13id.cardNum }}</td>
+                    </tr>
+                {% endif %}
+            </table>
+        {% endif %}
+        <div><h4><a href="{{ path('monthly_index') }}">Return to Index</a></h4></div>
+    </div>
+{% endblock %}

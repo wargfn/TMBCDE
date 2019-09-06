@@ -3,6 +3,58 @@
 {% block title %}Monthly Challenges{% endblock %}
 
 {% block body %}
-<h1>Monthly Challenges</h1>
-<p>All this was rendered in TWIGS!!!</p>
+    <div class="container">
+        <h1>Monthly Challenges</h1>
+        <p>Choose your adventure. Build your Gearloc. Get crushed.</p>
+        <table class="table table-borderless">
+            <tr>
+                {#<th>Id</th>#}
+                <th>Name</th>
+                <th>Challenge Set</th>
+                <th>Challenge Type</th>
+                <th>Tyrant</th>
+                <th>Day 1</th>
+                <th>Day 2</th>
+                <th>Day 3</th>
+                <th>Day 4</th>
+                <th>Day 5</th>
+                <th>Day 6</th>
+                <th>Day 7</th>
+            </tr>
+            {% if monthlyChallenges is defined and monthlyChallenges is not empty %}
+               {% for monthlyChallenge in monthlyChallenges %}
+                    <tr>
+                        {#<td>{{ monthlyChallenge.id }}</td>#}
+                        <td><a href="{{ path('monthly_by_id', {'id':monthlyChallenge.id}) }}">{{ monthlyChallenge.name }}</a></td>
+                        <td>{{ monthlyChallenge.challengeset }}</td>
+                        <td>{{ monthlyChallenge.challengetype }}</td>
+                        <td>{{ monthlyChallenge.encounterlistid.tyrantid.name }}</td>
+                        <td>{{ monthlyChallenge.encounterlistid.day1id.name }}</td>
+                        <td>{{ monthlyChallenge.encounterlistid.day2id.name }}</td>
+                        <td>{{ monthlyChallenge.encounterlistid.day3id.name }}</td>
+                        <td>{{ monthlyChallenge.encounterlistid.day4id.name }}</td>
+                        <td>{{ monthlyChallenge.encounterlistid.day5id.name }}</td>
+                        <td>{{ monthlyChallenge.encounterlistid.day6id.name }}</td>
+                        <td>{{ monthlyChallenge.encounterlistid.day7id.name }}</td>
+                    </tr>
+                {% endfor %}
+            {% if monthlyChallenges|length == 1 %}
+                    <tr>
+                        {#<td>{{ monthlyChallenges.id }}</td>#}
+                        <td><a href="{{ path('monthly_index', {'id':monthlyChallenges.id}) }}">{{ monthlyChallenges.name }}</a></td>
+                        <td>{{ monthlyChallenges.challengeset }}</td>
+                        <td>{{ monthlyChallenges.challengetype }}</td>
+                        <td>{{ monthlyChallenges.encounterlistid.tyrantid.name }}</td>
+                        <td>{{ monthlyChallenges.encounterlistid.day1id.name }}</td>
+                        <td>{{ monthlyChallenges.encounterlistid.day2id.name }}</td>
+                        <td>{{ monthlyChallenges.encounterlistid.day3id.name }}</td>
+                        <td>{{ monthlyChallenges.encounterlistid.day4id.name }}</td>
+                        <td>{{ monthlyChallenges.encounterlistid.day5id.name }}</td>
+                        <td>{{ monthlyChallenges.encounterlistid.day6id.name }}</td>
+                        <td>{{ monthlyChallenges.encounterlistid.day7id.name }}</td>
+                    </tr>
+                {% endif %}
+            {% endif %}
+        </table>
+    </div>
 {% endblock %}

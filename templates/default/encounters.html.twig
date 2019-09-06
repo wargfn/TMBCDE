@@ -3,11 +3,52 @@
 {% block title %}Adventure Encounter{% endblock %}
 
 {% block body %}
-    <h1>Adventure Encounters</h1>
-    <p>All this was rendered in TWIGS!!!</p>
-    {% if encounter is defined and encounter is not empty %}
-        {{ encounter.name }}
-    {% elseif encounter is not defined %}
-        <p>Did not Pass any variables</p>
-    {% endif %}
+    <div class="container">
+        <h1>Encounters</h1>
+        <p>Adventure awaits you.</p>
+        <table class="table table-borderless">
+            <tr>
+                {#<th>Id</th>#}
+                <th>Name</th>
+                <th>Tyrant</th>
+                <th>Day 1</th>
+                <th>Day 2</th>
+                <th>Day 3</th>
+                <th>Day 4</th>
+                <th>Day 5</th>
+                <th>Day 6</th>
+                <th>Day 7</th>
+            </tr>
+            {% if encounters is defined and encounters is not empty %}
+            {% for encounter in encounters %}
+                    <tr>
+                        {#<td>{{ encounter.id }}</td>#}
+                        <td><a href="{{ path('encounters_by_id', {'id':encounter.id}) }}">{{ encounter.name }}</a></td>
+                        <td>{{ encounter.tyrantid.name }}</td>
+                        <td>{{ encounter.day1id.name }}</td>
+                        <td>{{ encounter.day2id.name }}</td>
+                        <td>{{ encounter.day3id.name }}</td>
+                        <td>{{ encounter.day4id.name }}</td>
+                        <td>{{ encounter.day5id.name }}</td>
+                        <td>{{ encounter.day6id.name }}</td>
+                        <td>{{ encounter.day7id.name }}</td>
+                    </tr>
+                {% endfor %}
+                {% if encounters|length == 1 %}
+                    <tr>
+                        {#<td>{{ encounters.id }}</td>#}
+                        <td><a href="{{ path('encounters_index', {'id':encounters.id}) }}">{{ encounters.name }}</a></td>
+                        <td>{{ encounters.tyrantid.name }}</td>
+                        <td>{{ encounters.day1id.name }}</td>
+                        <td>{{ encounters.day2id.name }}</td>
+                        <td>{{ encounters.day3id.name }}</td>
+                        <td>{{ encounters.day4id.name }}</td>
+                        <td>{{ encounters.day5id.name }}</td>
+                        <td>{{ encounters.day6id.name }}</td>
+                        <td>{{ encounters.day7id.name }}</td>
+                    </tr>
+                {% endif %}
+            {% endif %}
+        </table>
+    </div>
 {% endblock %}

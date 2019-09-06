@@ -19,42 +19,42 @@ class Monthlychallenges
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    public $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="Name", type="string", length=255, nullable=false)
      */
-    private $name;
+    public $name;
 
     /**
      * @var string
      *
      * @ORM\Column(name="Description", type="string", length=255, nullable=false)
      */
-    private $description;
+    public $description;
 
     /**
      * @var string
      *
      * @ORM\Column(name="ChallengeSet", type="string", length=255, nullable=false)
      */
-    private $challengeset;
+    public $challengeset;
 
     /**
      * @var string
      *
      * @ORM\Column(name="ChallengeType", type="string", length=255, nullable=false)
      */
-    private $challengetype;
+    public $challengetype;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="MonthlyDate", type="date", nullable=false)
      */
-    private $monthlydate;
+    public $monthlydate;
 
     /**
      * @var \Encounterlists
@@ -64,7 +64,7 @@ class Monthlychallenges
      *   @ORM\JoinColumn(name="EncounterListId", referencedColumnName="Id")
      * })
      */
-    private $encounterlistid;
+    public $encounterlistid;
 
 
 }
