@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Encounter Cards{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        {% if cards is defined and cards is not empty %}
+            <h1>Card Catalogue</h1>
+            <table class="table table-borderless">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Card Set</th>
+                    <th>Card Type</th>
+                    <th>Card Number</th>
+                </tr>
+                {% for card in cards %}
+                    <tr>
+                        <td>{{ card.id }}</td>
+                        <td><a href="{{ path('cards_get_by_id', {"id" : card.id}) }}">{{ card.name }}</a></td>
+                        <td>{{ card.cardSet }}</td>
+                        <td>{{ card.cardType }}</td>
+                        <td>{{ card.cardNum }}</td>
+                    </tr>
+                {% endfor %}
+                {% if cards|length is same as(1) %}
+                    <tr>
+                        <td>{{ cards.id }}</td>
+                        <td><a href="{{ path('cards_index') }}">{{ cards.name }}</a></td>
+                        <td>{{ cards.cardSet }}</td>
+                        <td>{{ cards.cardType }}</td>
+                        <td>{{ cards.cardNum }}</td>
+                    </tr>
+                {% endif %}
+            </table>
+        {% endif %}
+    </div>
+{% endblock %}
