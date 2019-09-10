@@ -17,38 +17,38 @@ class MonthlyPublish
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      **/
-    private $id;
+    public $id;
 
     /**
      * @ORM\Column(name="Name", type="string", length=255, nullable=false)
      */
-    private $name;
+    public $name;
 
     /**
      * @ORM\Column(name="Description", type="string", length=255, nullable=false)
      */
-    private $description;
+    public $description;
 
     /**
      * @ORM\Column(name="ChallengeSet", type="string", length=255, nullable=false)
      */
-    private $challengeset;
+    public $challengeset;
 
     /**
      * @ORM\Column(name="ChallengeType", type="string", length=255, nullable=false)
      */
-    private $challengetype;
+    public $challengetype;
 
     /**
      * @ORM\Column(name="MonthlyDate", type="datetime", nullable=false)
      */
-    private $monthlydate;
+    public $monthlydate;
 
     /**
      *@ORM\Column(name="EncounterListId", nullable=false)
      * })
      */
-    private $encounterlistid;
+    public $encounterlistid;
 
     /**
      * @return mixed

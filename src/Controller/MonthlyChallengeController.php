@@ -68,7 +68,7 @@ class MonthlyChallengeController extends AbstractController
         $tyrant = $this->getDoctrine()->getRepository(Tyrants::class)->find($tyrantId);
 
         if(!$tyrant) {
-            throw $this->createNotFoundException('No Tyrant Foound');
+            throw $this->createNotFoundException('No Tyrant Found');
         }
 
 
