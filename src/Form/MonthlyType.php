@@ -20,6 +20,7 @@ class MonthlyType extends AbstractType
             ->add('save', SubmitType::class)
         ;
     }
+
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(

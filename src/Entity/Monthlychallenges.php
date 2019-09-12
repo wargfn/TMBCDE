@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -19,42 +20,42 @@ class Monthlychallenges
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
+    private $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="Name", type="string", length=255, nullable=false)
      */
-    public $name;
+    private $name;
 
     /**
      * @var string
      *
      * @ORM\Column(name="Description", type="string", length=255, nullable=false)
      */
-    public $description;
+    private $description;
 
     /**
      * @var string
      *
      * @ORM\Column(name="ChallengeSet", type="string", length=255, nullable=false)
      */
-    public $challengeset;
+    private $challengeset;
 
     /**
      * @var string
      *
      * @ORM\Column(name="ChallengeType", type="string", length=255, nullable=false)
      */
-    public $challengetype;
+    private $challengetype;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      *
      * @ORM\Column(name="MonthlyDate", type="date", nullable=false)
      */
-    public $monthlydate;
+    private $monthlydate;
 
     /**
      * @var \Encounterlists
@@ -64,68 +65,68 @@ class Monthlychallenges
      *   @ORM\JoinColumn(name="EncounterListId", referencedColumnName="Id")
      * })
      */
-    public $encounterlistid;
+    private $encounterlistid;
 
     /**
-     * @return int
+     * @return mixed
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
 
     /**
-     * @param int $id
+     * @param mixed $id
      */
-    public function setId(int $id): void
+    public function setId(int $id)
     {
         $this->id = $id;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
+     * @param mixed $name
      */
-    public function setName(string $name): void
+    public function setName(string $name)
     {
         $this->name = $name;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getDescription(): string
+    public function getDescription()
     {
         return $this->description;
     }
 
     /**
-     * @param string $description
+     * @param mixed $description
      */
-    public function setDescription(string $description): void
+    public function setDescription(string $description)
     {
         $this->description = $description;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getChallengeset(): string
+    public function getChallengeset()
     {
         return $this->challengeset;
     }
 
     /**
-     * @param string $challengeset
+     * @param mixed $challengeset
      */
-    public function setChallengeset(string $challengeset): void
+    public function setChallengeset(string $challengeset)
     {
         $this->challengeset = $challengeset;
     }
@@ -133,7 +134,7 @@ class Monthlychallenges
     /**
      * @return string
      */
-    public function getChallengetype(): string
+    public function getChallengetype()
     {
         return $this->challengetype;
     }
@@ -141,23 +142,23 @@ class Monthlychallenges
     /**
      * @param string $challengetype
      */
-    public function setChallengetype(string $challengetype): void
+    public function setChallengetype(string $challengetype)
     {
         $this->challengetype = $challengetype;
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
-    public function getMonthlydate(): \DateTime
+    public function getMonthlydate()
     {
         return $this->monthlydate;
     }
 
     /**
-     * @param \DateTime $monthlydate
+     * @param DateTime $monthlydate
      */
-    public function setMonthlydate(\DateTime $monthlydate): void
+    public function setMonthlydate(DateTime $monthlydate)
     {
         $this->monthlydate = $monthlydate;
     }
@@ -173,7 +174,7 @@ class Monthlychallenges
     /**
      * @param \Encounterlists $encounterlistid
      */
-    public function setEncounterlistid(Encounterlists $encounterlistid): void
+    public function setEncounterlistid(Encounterlists $encounterlistid)
     {
         $this->encounterlistid = $encounterlistid;
     }
