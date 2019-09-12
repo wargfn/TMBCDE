@@ -80,7 +80,7 @@ class API extends AbstractFOSRestController
 
     /**
      * Lists all Monthlychallenges
-     * @Rest\Get("/monthly")
+     * @Rest\Get("/monthlys")
      *
      * @return Response
      */
@@ -2641,7 +2641,7 @@ class API extends AbstractFOSRestController
     }
 
     /**
-     * @Route("/monthly/{id}", name="monthly_by_id", requirements={"id" = "\d+"}))
+     * @Route("/monthlys/{id}", name="monthly_by_id", requirements={"id" = "\d+"}))
      */
     public function monthlyById($id)
     {

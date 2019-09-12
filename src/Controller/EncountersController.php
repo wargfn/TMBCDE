@@ -4,7 +4,6 @@
 namespace App\Controller;
 
 use App\Entity\Encounterlists;
-use App\Entity\EncounterPublish;
 use App\Entity\Tyrants;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -44,8 +43,7 @@ class EncountersController extends AbstractController
             throw $this->createNotFoundException('No Encounter found');
         }
 
-        $encPublish = $this->getDoctrine()->getRepository(EncounterPublish::class)->find($id);
-        $tyrantId = $encPublish->getTyrantId();
+        $tyrantId = $encounters->getTyrantId();
 
         $tyrant = $this->getDoctrine()->getRepository(Tyrants::class)->find($tyrantId);
 

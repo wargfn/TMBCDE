@@ -19,12 +19,12 @@ use Doctrine\ORM\EntityManager;
 
 /**
  * Card controller
- * @Route("/api", name="api_")
+ * @Route("/api", name="api_", methods={"POST"})
  */
 class APIPostController extends AbstractFOSRestController
 {
     /**
-     * @Route("/encounter/add", name="encounter_post", methods={"POST"})
+     * @Route("/encounter/add", name="encounter_post")
      */
     public function encountersPost(Request $request)
     {
@@ -44,7 +44,7 @@ class APIPostController extends AbstractFOSRestController
     }
 
     /**
-     * @Route("/monthly/add", name="monthly_post", methods={"POST"})
+     * @Route("/monthly/add", name="monthly_post")
      */
     public function monthlyPost(Request $request)
     {
@@ -62,4 +62,85 @@ class APIPostController extends AbstractFOSRestController
         }
         return $this->handleView($this->view($form->getErrors()));
     }
+
+    /**
+     * @Route("/card/add", name="card_post")
+     */
+    public function cardPost(Request $request)
+    {
+        $challenge = new Monthlychallenges();
+        $form = $this->createForm(MonthlyType::class, $challenge);
+        $data = json_decode($request->getContent(), true);
+        $form->submit($data);
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($challenge);
+            $em->flush();
+            return $this->handleView($this->view($challenge, Response::HTTP_CREATED));
+
+        }
+        return $this->handleView($this->view($form->getErrors()));
+    }
+
+    /**
+     * @Route("/gearloc/add", name="gearloc_post")
+     */
+    public function gearlocPost(Request $request)
+    {
+        $challenge = new Monthlychallenges();
+        $form = $this->createForm(MonthlyType::class, $challenge);
+        $data = json_decode($request->getContent(), true);
+        $form->submit($data);
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($challenge);
+            $em->flush();
+            return $this->handleView($this->view($challenge, Response::HTTP_CREATED));
+
+        }
+        return $this->handleView($this->view($form->getErrors()));
+    }
+
+    /**
+     * @Route("/tyrant/add", name="tyrant_post")
+     */
+    public function tyrantPost(Request $request)
+    {
+        $challenge = new Monthlychallenges();
+        $form = $this->createForm(MonthlyType::class, $challenge);
+        $data = json_decode($request->getContent(), true);
+        $form->submit($data);
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($challenge);
+            $em->flush();
+            return $this->handleView($this->view($challenge, Response::HTTP_CREATED));
+
+        }
+        return $this->handleView($this->view($form->getErrors()));
+    }
+
+    /**
+     * @Route("/bats/add", name="bats_tyrant_post")
+     */
+    public function batsTyrantPost(Request $request)
+    {
+        $challenge = new Monthlychallenges();
+        $form = $this->createForm(MonthlyType::class, $challenge);
+        $data = json_decode($request->getContent(), true);
+        $form->submit($data);
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($challenge);
+            $em->flush();
+            return $this->handleView($this->view($challenge, Response::HTTP_CREATED));
+
+        }
+        return $this->handleView($this->view($form->getErrors()));
+    }
+
 }

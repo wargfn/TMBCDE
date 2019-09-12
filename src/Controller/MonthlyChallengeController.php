@@ -3,8 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Monthlychallenges;
-use App\Entity\MonthlyPublish;
-use App\Entity\EncounterPublish;
 use App\Entity\Encounterlists;
 use App\Entity\Tyrants;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -40,17 +38,12 @@ class MonthlyChallengeController extends AbstractController
     public function monthly($id)
     {
         $monthlyChallenges = $this->getDoctrine()->getRepository(Monthlychallenges::class)->find($id);
-        $monthlyPub = $this->getDoctrine()->getRepository(MonthlyPublish::class)->find($id);
 
         if(!$monthlyChallenges) {
             throw $this->createNotFoundException('No Monthly Challenge');
         }
 
-        if(!$monthlyPub) {
-            throw $this->createNotFoundException('No Monthly Challenge');
-        }
-
-        $monthlyEnc = $monthlyPub->getEncounterlistid();
+        $monthlyEnc = $monthlyChallenges->getEncounterlistid();
 
         if(!$monthlyEnc) {
             throw $this->createNotFoundException('No Encounter list found');
@@ -62,8 +55,7 @@ class MonthlyChallengeController extends AbstractController
             throw $this->createNotFoundException('No Encounter list found');
         }
 
-        $encPublish = $this->getDoctrine()->getRepository(EncounterPublish::class)->find($monthlyEnc);
-        $tyrantId = $encPublish->getTyrantId();
+        $tyrantId = $encounters->getTyrantId();
 
         $tyrant = $this->getDoctrine()->getRepository(Tyrants::class)->find($tyrantId);
 

@@ -66,5 +66,118 @@ class Monthlychallenges
      */
     public $encounterlistid;
 
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription(string $description): void
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getChallengeset(): string
+    {
+        return $this->challengeset;
+    }
+
+    /**
+     * @param string $challengeset
+     */
+    public function setChallengeset(string $challengeset): void
+    {
+        $this->challengeset = $challengeset;
+    }
+
+    /**
+     * @return string
+     */
+    public function getChallengetype(): string
+    {
+        return $this->challengetype;
+    }
+
+    /**
+     * @param string $challengetype
+     */
+    public function setChallengetype(string $challengetype): void
+    {
+        $this->challengetype = $challengetype;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getMonthlydate(): \DateTime
+    {
+        return $this->monthlydate;
+    }
+
+    /**
+     * @param \DateTime $monthlydate
+     */
+    public function setMonthlydate(\DateTime $monthlydate): void
+    {
+        $this->monthlydate = $monthlydate;
+    }
+
+    /**
+     * @return \Encounterlists
+     */
+    public function getEncounterlistid()
+    {
+        return $this->encounterlistid;
+    }
+
+    /**
+     * @param \Encounterlists $encounterlistid
+     */
+    public function setEncounterlistid(Encounterlists $encounterlistid): void
+    {
+        $this->encounterlistid = $encounterlistid;
+    }
+
+
 
 }

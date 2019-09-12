@@ -21,3 +21,8 @@ framework:
 
     translator:
         enabled: false
+
+    templating:
+        engines: ['twig', 'php']
+
+
