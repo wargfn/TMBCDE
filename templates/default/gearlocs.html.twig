@@ -9,6 +9,7 @@
     <table class="table table-borderless">
         <tr>
             <th>Id</th>
+            <th>  </th>
             <th>Name</th>
             <th>Health</th>
             <th>Dexterity</th>
@@ -19,6 +20,7 @@
             {% for gearloc in gearlocs %}
                 <tr>
                     <td>{{ gearloc.id }}</td>
+                    <td><a href="{{ path('gearlocs_by_id', {'id':gearloc.id}) }}"><img src="{{ asset('/images/'~gearloc.name~'.jpg') }}" width="100px" height="100px"></a></td>
                     <td><a href="{{ path('gearlocs_by_id', {'id':gearloc.id}) }}">{{ gearloc.name }}</a></td>
                     <td>{{ gearloc.health }}</td>
                     <td>{{ gearloc.dexterity }}</td>
@@ -28,7 +30,8 @@
             {% endfor %}
             {% if gearlocs|length == 1 %}
                 <tr>
-                    <td>{{ gearlocs.id }}</td>
+                    <td>{{ gearlocs.id }}
+                    <td><a href="{{ path('gearlocs_index') }}"><img src="{{ asset('/images/'~gearlocs.name~'.jpg') }}" width="100px" height="100px"></a></td>
                     <td><a href="{{ path('gearlocs_index') }}">{{ gearlocs.name }}</a></td>
                     <td>{{ gearlocs.health }}</td>
                     <td>{{ gearlocs.dexterity }}</td>

@@ -9,6 +9,7 @@
         <table class="table table-borderless">
             <tr>
                 {#<th>Id</th>#}
+                <th></th>
                 <th>Name</th>
                 <th>Challenge Set</th>
                 <th>Challenge Type</th>
@@ -25,6 +26,7 @@
                {% for monthlyChallenge in monthlyChallenges %}
                     <tr>
                         {#<td>{{ monthlyChallenge.id }}</td>#}
+                        <td><a href="{{ path('monthly_by_id', {'id':monthlyChallenge.id}) }}"><img src="{{ asset('/images/'~monthlyChallenge.encounterlistid.tyrantid.name~'.jpg') }}" width="100px" height="100px"></a></td>
                         <td><a href="{{ path('monthly_by_id', {'id':monthlyChallenge.id}) }}">{{ monthlyChallenge.name }}</a></td>
                         <td>{{ monthlyChallenge.challengeset }}</td>
                         <td>{{ monthlyChallenge.challengetype }}</td>
@@ -41,6 +43,7 @@
             {% if monthlyChallenges|length == 1 %}
                     <tr>
                         {#<td>{{ monthlyChallenges.id }}</td>#}
+                        <td><a href="{{ path('monthly_index', {'id':monthlyChallenges.id}) }}"><img src="{{ asset('/images/'~monthlyChallenges.encounterlistid.tyrantid.name~'.jpg') }}" width="100px" height="100px"></a></td>
                         <td><a href="{{ path('monthly_index', {'id':monthlyChallenges.id}) }}">{{ monthlyChallenges.name }}</a></td>
                         <td>{{ monthlyChallenges.challengeset }}</td>
                         <td>{{ monthlyChallenges.challengetype }}</td>

@@ -9,6 +9,7 @@
         <table class="table table-borderless">
             <tr>
                 <th>Id</th>
+                <th>  </th>
                 <th>Name</th>
                 <th>Progress</th>
                 <th>Days</th>
@@ -17,6 +18,7 @@
                 {% for tyrant in tyrants %}
                     <tr>
                         <td>{{ tyrant.id }}</td>
+                        <td><a href="{{ path('tyrants_by_id', {'id':tyrant.id}) }}"><img src="{{ asset('/images/'~tyrant.name~'.jpg') }}" width="100px" height="100px"></a></td>
                         <td><a href="{{ path('tyrants_by_id', {'id':tyrant.id}) }}">{{ tyrant.name }}</a></td>
                         <td>{{ tyrant.progress }}</td>
                         <td>{{ tyrant.days }}</td>
@@ -25,6 +27,7 @@
                 {% if tyrants|length == 1 %}
                     <tr>
                         <td>{{ tyrants.id }}</td>
+                        <td><a href="{{ path('tyrants_index') }}"><img src="{{ asset('/images/'~tyrants.name~'.jpg') }}" width="100px" height="100px"></a></td>
                         <td><a href="{{ path('tyrants_index') }}">{{ tyrants.name }}</a></td>
                         <td>{{ tyrants.progress }}</td>
                         <td>{{ tyrants.days }}</td>

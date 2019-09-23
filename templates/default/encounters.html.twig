@@ -9,6 +9,7 @@
         <table class="table table-borderless">
             <tr>
                 {#<th>Id</th>#}
+                <th>   </th>
                 <th>Name</th>
                 <th>Tyrant</th>
                 <th>Day 1</th>
@@ -23,6 +24,7 @@
             {% for encounter in encounters %}
                     <tr>
                         {#<td>{{ encounter.id }}</td>#}
+                        <td><a href="{{ path('encounters_by_id', {'id':encounter.id}) }}"><img src="{{ asset('/images/'~encounter.tyrantid.name~'.jpg') }}" width="100px" height="100px"></a></td>
                         <td><a href="{{ path('encounters_by_id', {'id':encounter.id}) }}">{{ encounter.name }}</a></td>
                         <td>{{ encounter.tyrantid.name }}</td>
                         <td>{{ encounter.day1id.name }}</td>
@@ -37,6 +39,7 @@
                 {% if encounters|length == 1 %}
                     <tr>
                         {#<td>{{ encounters.id }}</td>#}
+                        <td><a href="{{ path('encounters_index', {'id':encounters.id}) }}"><img src="{{ asset('/images/'~encounters.tyrantid.name~'.jpg') }}" width="100px" height="100px"></a></td>
                         <td><a href="{{ path('encounters_index', {'id':encounters.id}) }}">{{ encounters.name }}</a></td>
                         <td>{{ encounters.tyrantid.name }}</td>
                         <td>{{ encounters.day1id.name }}</td>
