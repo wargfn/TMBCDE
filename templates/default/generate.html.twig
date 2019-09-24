@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Generate an Adventure Encounter Set{% endblock %}
+{% block body %}
+    <div class="container-fluid content-body">
+        <h1>Generate an Encounter</h1>
+            {{ form_start(our_form) }}
+            {{ form_widget(our_form) }}
+
+            <input type="submit" value="Generate Encounter" />
+            {{ form_end(our_form) }}
+    </div>
+{% endblock %}

@@ -5,7 +5,10 @@
 {% block body %}
     <div class="container-fluid">
         <h1>Encounters</h1>
-        <p>Adventure awaits you.</p>
+        <p>Adventure awaits you.
+        <div class="text-right">
+            <a class="btn btn-primary btn-sm" href="{{ path('generate_index') }}">Generate Encounter</a>
+        </div>
         <table class="table table-borderless">
             <tr>
                 {#<th>Id</th>#}
