@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 
+use App\Entity\Encounterlists;
 use App\Entity\Tyrants;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -44,7 +45,14 @@ class TyrantsController extends AbstractController
             throw $this->createNotFoundException('No Tyrants Found');
         }
 
-        return $this->render('default/tyrants.html.twig', array('tyrants'=>$tyrants));
+        /* $tid = $tyrants.id; */
+
+        $encounters = $this->getDoctrine()->getRepository(Encounterlists::class)->findBy(['tyrantid' => $tyrants]);
+        if(!$encounters) {
+            //throw $this->createNotFoundException('No Encounters Found');
+            $encounters = [];
+        }
+        return $this->render('default/tyrants.html.twig', array('encounters'=>$encounters, 'tyrants'=>$tyrants));
     }
 
 }
