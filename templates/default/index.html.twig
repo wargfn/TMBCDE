@@ -15,6 +15,7 @@
             <h2>Current Community Challenges</h2>
             {% if currentChallenges is defined and currentChallenges is not empty %}
                 {% if currentChallenges|length > 1 %}
+                    {{ dump(_context|keys) }}
                     {% for currentChallenge in currentChallenges %}
             <div class="row">
                 <div class="col-lg4">
@@ -41,14 +42,26 @@
                 <div class="col-lg-1"></div>
                     {% endfor %}
                 {% endif %}
-                {% if currentChallenges|length is same as(1) %}
+                {% if currentChallenges|length == 1 %}
                 <div class="col-lg-1"></div>
                 <div class="col-lg4">
                     <div class="card border-primary mb-3" style="max-width: 20rem;">
-                        <div class="card-header">Header</div>
+                        <div class="card-header">{{ currentChallenges[0].description }}</div>
                         <div class="card-body">
-                            <h4 class="card-title">Primary card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h4 class="card-title"><a href="{{ path('monthly_by_id', {'id':currentChallenges[0].id} ) }}">{{ currentChallenges[0].name }}</a></h4>
+                            <a href="{{ path('monthly_by_id', {'id':currentChallenges[0].id} ) }}">
+                                {% if currentChallenges[0].challengeset is same as('Base Set') %}
+                                    <img  class="align-content-center" src="{{ asset('images/toomanyboneslogo.png') }}" width="200px" height="100px">
+                                {% endif %}
+                                {% if currentChallenges[0].challengeset is same as('Undertow') %}
+                                    <img class="align-content-center" src="{{ asset('images/toomanybonesundertowlogo.png') }}" width="200px" height="100px">
+                                {% endif %}
+                                {% if currentChallenges[0].challengeset is same as('Splice & Dice') %}
+                                    <img class="align-content-center" src="{{ asset('images/toomanybonessplicedicelogo.png') }}" width="200px" height="100px">
+                                {% endif %}
+                            </a>
+                            <p></p>
+                            <p class="card-text">{{ currentChallenges[0].challengeset }} - {{ currentChallenges[0].challengetype }}</p>
                         </div>
                     </div>
                 </div>

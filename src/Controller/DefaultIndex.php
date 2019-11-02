@@ -32,17 +32,16 @@ class DefaultIndex extends AbstractController
 
         $qb = $this->getDoctrine()->getRepository(Monthlychallenges::class)->createQueryBuilder('object');
         $qb->where('object.monthlydate BETWEEN :start AND :end');
-        $qb->setParameter('start', $startDate->format('Y-m-d H:i:s'));
-        $qb->setParameter('end', $endDate->format('Y-m-d H:i:s'));
+        $qb->setParameter('start', $startDate->format('Y-m-d'));
+        $qb->setParameter('end', $endDate->format('Y-m-d'));
 
         //$repository = $this->getDoctrine()->getRepository(Encounterlists::class);
         $currentChallenges = $qb->getQuery()->getResult();
-        /*
+
         if(!$currentChallenges)
         {
             throw $this->createNotFoundException('No Monthly Challenges found');
         }
-        */
 
        return $this->render('default/index.html.twig',
            array('currentChallenges'=>$currentChallenges)
