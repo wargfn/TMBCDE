@@ -10,6 +10,8 @@
         "friendsofsymfony/rest-bundle": "^2.5",
         "friendsofsymfony/user-bundle": "^2.1",
         "jms/serializer-bundle": "^3.3",
+        "laminas/laminas-code": "^3.4",
+        "laminas/laminas-eventmanager": "^3.2",
         "sensio/framework-extra-bundle": "^5.4",
         "symfony/asset": "4.3.*",
         "symfony/console": "4.3.*",
