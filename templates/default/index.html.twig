@@ -15,7 +15,6 @@
             <h2>Current Community Challenges</h2>
             {% if currentChallenges is defined and currentChallenges is not empty %}
                 {% if currentChallenges|length > 1 %}
-                    {{ dump(_context|keys) }}
                     {% for currentChallenge in currentChallenges %}
             <div class="row">
                 <div class="col-lg4">
