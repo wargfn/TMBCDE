@@ -6,7 +6,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class BATType extends AbstractType
+class BATsType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {

@@ -156,7 +156,7 @@ class BATs
     private $baddie3;
 
     /**
-     * @return int
+     * @return mixed
      */
     public function getId(): int
     {
@@ -164,7 +164,7 @@ class BATs
     }
 
     /**
-     * @param int $id
+     * @param mixed $id
      */
     public function setId(int $id): void
     {
@@ -172,7 +172,7 @@ class BATs
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getName(): string
     {
@@ -180,7 +180,7 @@ class BATs
     }
 
     /**
-     * @param string $name
+     * @param mixed $name
      */
     public function setName(string $name): void
     {
@@ -188,7 +188,7 @@ class BATs
     }
 
     /**
-     * @return int
+     * @return mixed
      */
     public function getDays(): int
     {
@@ -196,7 +196,7 @@ class BATs
     }
 
     /**
-     * @param int $days
+     * @param mixed $days
      */
     public function setDays(int $days): void
     {
@@ -204,7 +204,7 @@ class BATs
     }
 
     /**
-     * @return int
+     * @return mixed
      */
     public function getProgress(): int
     {
@@ -212,7 +212,7 @@ class BATs
     }
 
     /**
-     * @param int $progress
+     * @param mixed $progress
      */
     public function setProgress(int $progress): void
     {
@@ -220,7 +220,7 @@ class BATs
     }
 
     /**
-     * @return int
+     * @return mixed
      */
     public function getHealth(): int
     {
@@ -228,7 +228,7 @@ class BATs
     }
 
     /**
-     * @param int $health
+     * @param mixed $health
      */
     public function setHealth(int $health): void
     {
@@ -236,7 +236,7 @@ class BATs
     }
 
     /**
-     * @return int
+     * @return mixed
      */
     public function getIni(): int
     {
@@ -244,7 +244,7 @@ class BATs
     }
 
     /**
-     * @param int $ini
+     * @param mixed $ini
      */
     public function setIni(int $ini): void
     {
@@ -252,7 +252,7 @@ class BATs
     }
 
     /**
-     * @return int
+     * @return mixed
      */
     public function getAtk(): int
     {
@@ -260,7 +260,7 @@ class BATs
     }
 
     /**
-     * @param int $atk
+     * @param mixed $atk
      */
     public function setAtk(int $atk): void
     {
@@ -268,7 +268,7 @@ class BATs
     }
 
     /**
-     * @return int
+     * @return mixed
      */
     public function getDef(): int
     {
@@ -276,7 +276,7 @@ class BATs
     }
 
     /**
-     * @param int $def
+     * @param mixed $def
      */
     public function setDef(int $def): void
     {
@@ -284,7 +284,7 @@ class BATs
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getTdie1(): string
     {
@@ -292,7 +292,7 @@ class BATs
     }
 
     /**
-     * @param string $tdie1
+     * @param mixed $tdie1
      */
     public function setTdie1(string $tdie1): void
     {
@@ -300,7 +300,7 @@ class BATs
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getTdie2(): string
     {
@@ -308,7 +308,7 @@ class BATs
     }
 
     /**
-     * @param string $tdie2
+     * @param mixed $tdie2
      */
     public function setTdie2(string $tdie2): void
     {
@@ -316,7 +316,7 @@ class BATs
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getTdie3(): string
     {
@@ -324,7 +324,7 @@ class BATs
     }
 
     /**
-     * @param string $tdie3
+     * @param mixed $tdie3
      */
     public function setTdie3(string $tdie3): void
     {
@@ -332,7 +332,7 @@ class BATs
     }
 
     /**
-     * @return int
+     * @return mxied
      */
     public function getRange(): int
     {
@@ -340,7 +340,7 @@ class BATs
     }
 
     /**
-     * @param int $range
+     * @param mixed $range
      */
     public function setRange(int $range): void
     {
@@ -348,7 +348,7 @@ class BATs
     }
 
     /**
-     * @return int
+     * @return mixed
      */
     public function getTarget(): int
     {
@@ -356,7 +356,7 @@ class BATs
     }
 
     /**
-     * @param int $target
+     * @param mixed $target
      */
     public function setTarget(int $target): void
     {
@@ -364,7 +364,7 @@ class BATs
     }
 
     /**
-     * @return int
+     * @return mixed
      */
     public function getSkull(): int
     {
@@ -372,7 +372,7 @@ class BATs
     }
 
     /**
-     * @param int $skull
+     * @param mixed $skull
      */
     public function setSkull(int $skull): void
     {
@@ -380,7 +380,7 @@ class BATs
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getSkill1(): string
     {
@@ -388,7 +388,7 @@ class BATs
     }
 
     /**
-     * @param string $skill1
+     * @param mixed $skill1
      */
     public function setSkill1(string $skill1): void
     {
@@ -396,7 +396,7 @@ class BATs
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getSkill2(): string
     {
@@ -404,7 +404,7 @@ class BATs
     }
 
     /**
-     * @param string $skill2
+     * @param mixed $skill2
      */
     public function setSkill2(string $skill2): void
     {
@@ -412,7 +412,7 @@ class BATs
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getSkill3(): string
     {
@@ -420,7 +420,7 @@ class BATs
     }
 
     /**
-     * @param string $skill3
+     * @param mixed $skill3
      */
     public function setSkill3(string $skill3): void
     {
@@ -428,7 +428,7 @@ class BATs
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getBaddie1(): string
     {
@@ -436,7 +436,7 @@ class BATs
     }
 
     /**
-     * @param string $baddie1
+     * @param mixed $baddie1
      */
     public function setBaddie1(string $baddie1): void
     {
@@ -444,7 +444,7 @@ class BATs
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getBaddie2(): string
     {
@@ -452,7 +452,7 @@ class BATs
     }
 
     /**
-     * @param string $baddie2
+     * @param mixed $baddie2
      */
     public function setBaddie2(string $baddie2): void
     {
@@ -460,7 +460,7 @@ class BATs
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getBaddie3(): string
     {
@@ -468,7 +468,7 @@ class BATs
     }
 
     /**
-     * @param string $baddie3
+     * @param mixed $baddie3
      */
     public function setBaddie3(string $baddie3): void
     {

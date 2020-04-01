@@ -3,6 +3,8 @@
 
 namespace App\Controller;
 
+use App\Entity\BATs;
+use App\Form\BATsType;
 use App\Form\EncounterType;
 use App\Form\MonthlyType;
 use Symfony\Component\HttpFoundation\Request;
@@ -10,11 +12,14 @@ use Symfony\Component\HttpFoundation\Response;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\Cards;
-use App\Entity\Tyrants;
+use App\Form\CardType;
+use App\Form\TyrantType;
 use App\Entity\Encounterlists;
 use App\Entity\Monthlychallenges;
+use App\Form\GearlocType;
 use App\Entity\Gearlocs;
+use App\Entity\Cards;
+use APP\Entity\Tyrants;
 use Doctrine\ORM\EntityManager;
 
 /**
@@ -68,16 +73,16 @@ class APIPostController extends AbstractFOSRestController
      */
     public function cardPost(Request $request)
     {
-        $challenge = new Monthlychallenges();
-        $form = $this->createForm(MonthlyType::class, $challenge);
+        $card = new Cards();
+        $form = $this->createForm(CardType::class, $card);
         $data = json_decode($request->getContent(), true);
         $form->submit($data);
         if($form->isSubmitted() && $form->isValid())
         {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($challenge);
+            $em->persist($card);
             $em->flush();
-            return $this->handleView($this->view($challenge, Response::HTTP_CREATED));
+            return $this->handleView($this->view($card, Response::HTTP_CREATED));
 
         }
         return $this->handleView($this->view($form->getErrors()));
@@ -88,16 +93,16 @@ class APIPostController extends AbstractFOSRestController
      */
     public function gearlocPost(Request $request)
     {
-        $challenge = new Monthlychallenges();
-        $form = $this->createForm(MonthlyType::class, $challenge);
+        $gearloc = new Gearlocs();
+        $form = $this->createForm(GearlocType::class, $gearloc);
         $data = json_decode($request->getContent(), true);
         $form->submit($data);
         if($form->isSubmitted() && $form->isValid())
         {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($challenge);
+            $em->persist($gearloc);
             $em->flush();
-            return $this->handleView($this->view($challenge, Response::HTTP_CREATED));
+            return $this->handleView($this->view($gearloc, Response::HTTP_CREATED));
 
         }
         return $this->handleView($this->view($form->getErrors()));
@@ -108,16 +113,16 @@ class APIPostController extends AbstractFOSRestController
      */
     public function tyrantPost(Request $request)
     {
-        $challenge = new Monthlychallenges();
-        $form = $this->createForm(MonthlyType::class, $challenge);
+        $tyrant = new Tyrants();
+        $form = $this->createForm(TyrantType::class, $tyrant);
         $data = json_decode($request->getContent(), true);
         $form->submit($data);
         if($form->isSubmitted() && $form->isValid())
         {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($challenge);
+            $em->persist($tyrant);
             $em->flush();
-            return $this->handleView($this->view($challenge, Response::HTTP_CREATED));
+            return $this->handleView($this->view($tyrant, Response::HTTP_CREATED));
 
         }
         return $this->handleView($this->view($form->getErrors()));
@@ -128,16 +133,16 @@ class APIPostController extends AbstractFOSRestController
      */
     public function batsTyrantPost(Request $request)
     {
-        $challenge = new Monthlychallenges();
-        $form = $this->createForm(MonthlyType::class, $challenge);
+        $bats = new BATs();
+        $form = $this->createForm(BATsType::class, $bats);
         $data = json_decode($request->getContent(), true);
         $form->submit($data);
         if($form->isSubmitted() && $form->isValid())
         {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($challenge);
+            $em->persist($bats);
             $em->flush();
-            return $this->handleView($this->view($challenge, Response::HTTP_CREATED));
+            return $this->handleView($this->view($bats, Response::HTTP_CREATED));
 
         }
         return $this->handleView($this->view($form->getErrors()));
